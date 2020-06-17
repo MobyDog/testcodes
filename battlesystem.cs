@@ -15,10 +15,10 @@ public class BattleSystem : MonoBehaviour // BattleState erbt von MonoBehavior
     public Transform playerBattleStation; // Referenz der Koordinaten von playerBattleStation
     public Transform enemyBattleStation; // Referenz der Koordinaten von enemyBattleStation 
 
-    Unit playerUnit; // Eine (private?) Variable von Typ Unit erstellen?
-    Unit enemyUnit; // Eine (private?) Variable von Typ Unit erstellen?
+    Unit playerUnit; // Private Variable von Datentyp Unit
+    Unit enemyUnit; // Private Variable von Datentyp Unit
 
-    public Text dialogueText; // Öffentliche Methode(?) dialogueText von Typ Text von UI Namespace?
+    public Text dialogueText; // Öffentliche Variable (.UI) von Datentyp Text
 
 
     public BattleState state; // Variable für das enum Battlestate erstellt
@@ -33,12 +33,12 @@ public class BattleSystem : MonoBehaviour // BattleState erbt von MonoBehavior
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation); // Eine Referenz von der Instanziierung erstellen (playerGO) ?
         // Instanziieren des player prefabs als child von und auf playerBattleStation
-        playerUnit = playerGO.GetComponent<Unit>(); // Variable playerUnit - Unit Komponente auf die playerGO Variable holen ?
+        playerUnit = playerGO.GetComponent<Unit>(); // Variable playerUnit - Eine Komponente von der Klasse Unit holen
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation); // Das gleiche wie darüber nur mit enemy unit
         enemyUnit = enemyGO.GetComponent<Unit>();
 
-        dialogueText.text = $"A wild {enemyUnit.unitName} approaches..."; // Textausgabe über dialogueText Methode?
+        dialogueText.text = $"A wild {enemyUnit.unitName} approaches..."; // Property/öffentliche Variable angesprochen
         
     }
 
