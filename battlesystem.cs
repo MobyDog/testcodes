@@ -32,7 +32,7 @@ public class BattleSystem : MonoBehaviour // BattleState erbt von MonoBehavior
     void SetupBattle() // Methode SetupBattle erstellen
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation); // Eine Referenz von der Instanziierung erstellen (playerGO) ?
-        // Instanziieren des player prefabs als child von und auf playerBattleStation
+        // Instanziieren des player prefabs (als child von und auf playerBattleStation?)
         playerUnit = playerGO.GetComponent<Unit>(); // Variable playerUnit - Eine Komponente von der Klasse Unit holen
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation); // Das gleiche wie darüber nur mit enemy unit
