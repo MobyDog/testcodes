@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI; // UI namespace erstellt (UI Elemente von Unity können verwendet werden)
 
 // Folgende Bugs sind mir aufgefallen:
-// - Man kann mehrmals nacheinander angreifen
+// - Man kann in einem Zug mehrmals nacheinander angreifen
 // - Wenn der Gegner stirbt, greift er trotzdem noch so oft an wie man selbst
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST } // Enumeration BattleState definiert (öffentlich)
